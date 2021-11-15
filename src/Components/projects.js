@@ -1,5 +1,6 @@
 
 
+import ProjectCard from './projectCard.js';
 
 
 function Projects(props) {
@@ -15,14 +16,7 @@ return (
     
 {props.projects.map(el=>
 
-<div class="project-card">
-    <img src={el.srcimg} alt="project" />
-    <h3>{el.name}</h3>
-    <p>
-    {props.lorem}
-    </p>
-    <p><a href="#">Github Link</a></p>
-</div>
+<ProjectCard el={el} lorem={props.lorem}/>
 
 )
 
